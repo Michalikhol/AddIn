@@ -1,0 +1,10 @@
+.ms-Dialog-actions, .ms-Dialog-content, .ms-Dialog-header {
+    width: 30%;
+}
+
+#actionButtons {
+    display: flex;
+    margin-top: 1%;
+}
+
+

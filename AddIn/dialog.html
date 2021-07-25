@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!-- Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license.
+4  See LICENSE in the project root for license information -->
+
+<html>
+<head>
+    <title>Dialog</title>
+	  <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <!-- Office JavaScript API -->
+    <script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js" type="text/javascript"></script>
+    <script type="text/javascript" src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.2.1.min.js"></script>
+
+    <!-- For the Office UI Fabric, go to http://aka.ms/office-ui-fabric to learn more. -->
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.min.css">
+    <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css">
+
+    <!-- Template styles -->
+  <link href="dialog.css" rel="stylesheet" type="text/css" />
+
+  <!-- Resource file for different lenguages: -->
+<!-- <script src="dialogLenguage.js" type="text/javascript"></script> -->
+
+
+    <script  src="dialogLenguage.js" type="text/javascript"></script>
+
+    <script>
+  
+      function send()
+      {
+        Office.context.ui.messageParent(true.toString());
+      }
+
+       function donstSend() {
+          Office.context.ui.messageParent(false.toString());
+      }
+    </script>
+    
+
+    </head>
+    <body>
+      <div>
+        <div class="ms-Dialog-header">
+          <p class="ms-Dialog-title" id="title">
+          </p>
+        </div>
+          <span style="font-family: sans-serif;" id="message">
+          </span>
+        </br>
+        </br>
+        <div id="actionButtons">
+          <div class="ms-Dialog-actions">
+              <div class="ms-Dialog-actionsLeft">
+                <button class="ms-Dialog-action ms-Button ms-Button--primary" onclick="send()">
+                  <span class="ms-Button-label" id="sendButton"></span>
+                </button>
+              </div>
+            </div>
+            <div class="ms-Dialog-actions">
+              <div class="ms-Dialog-actionsRight">
+                <button class="ms-Dialog-action ms-Button ms-Button--default" onclick="donstSend()">
+                  <span class="ms-Button-label" id="DontSendButton"></span>
+                </button>
+              </div>
+            </div>
+        </div>
+      </div>
+    </body>
+
+
+</html>
